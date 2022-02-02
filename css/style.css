@@ -1,0 +1,170 @@
+/* ! GLOBAL SETTINGS */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.row > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #d7dbd6;
+  position: relative;
+}
+
+.top-bar {
+  background-color: #00a884;
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.border-radius {
+  border-radius: 50%;
+}
+
+.container-app {
+  margin: 0 auto;
+  padding-top: 30px;
+  height: calc(100vh - 30px);
+}
+
+img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: #eaeaea;
+}
+
+.overflow {
+  overflow-y: auto;
+}
+
+/* ! ICON SECTION */
+
+i {
+  font-size: 22px;
+  color: #b1b1b1;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.fa-bell-slash {
+  margin-left: 20px;
+  background-color: #eaeaea;
+  font-size: 20px;
+  padding: 15px 15px;
+  border-radius: 50%;
+  color: #8edafc;
+}
+
+.settings-icon{
+  margin-right: 10px;
+}
+
+/* ! USER SECTION */
+#user {
+  background-color: #eaeaea;
+}
+
+/* ! NOTIFICATION SECTION */
+#notification {
+  background-color: #8edafc;
+  padding: 15px 10px;
+}
+#notification a {
+  color: gray;
+}
+
+/* ! SEARCH BAR SECTION */
+#search {
+  padding: 10px;
+  background-color: white;
+}
+
+#search input {
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+
+
+/* ! RECENT MESSAGE SECTION */
+#contacts,
+#show-chat {
+  height: 100%;
+  background-color: white;
+}
+
+.user-info {
+  padding: 10px 20px;
+}
+
+/* CONTANCT INFO CHAT */
+#chat-contact-info {
+  padding: 10px;
+  height: 80px;
+}
+
+#chat-contact-info span {
+  color: rgb(167, 152, 140);
+  font-size: 14px;
+}
+
+.chat-contact-info p {
+  margin-bottom: 0;
+}
+
+/* ! CHAT SECTION */
+#show-chat {
+  background-image: url("../img/mine.jpg");
+  padding: 40px 25px;
+}
+
+#show-chat span {
+position: absolute;
+  font-size: 10px;
+  color: gray;
+  bottom: 5px;
+  right: 10px;
+  
+
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.message.sent {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.message.received {
+  background-color: white;
+  align-self: flex-start;
+}
+
+/* ! MESSAGE COMPOSER SECTION */
+.footer {
+  background-color: #eaeaea;
+  padding: 10px;
+  height: 80px;
+}
+
+#message-composer i {
+  color: gray;
+  font-size: 25px;
+  padding: 15px;
+  cursor: pointer;
+}
