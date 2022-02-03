@@ -207,6 +207,7 @@ const root = new Vue({
         ],
     },
     methods: {
+        // AL INVIO DI UN NUOVO MESSAGGIO DA PARTE DEL UTENTE RISPONDE DOPO 1sec CON IN MESSAGGIO DI DEFAUL
         sendNewMessage() {
             const message = this.newMessage.trim();
             if (message) {
@@ -234,6 +235,8 @@ const root = new Vue({
             const number = Math.floor(Math.random() * (max - min + 1)) + min;
                 return number
         },
+
+        FUNZIONE CHE CAMBIA IL VALORE DEL
         deleteMessage(index) {
             this.contacts[this.currentIndex].messages.splice(index, 1);
         },
