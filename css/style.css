@@ -77,7 +77,8 @@ i {
   left: 0;
 }
 
-/* # MESSAGE MENU */
+
+/*! # MESSAGE MENU */
 
 .fa-caret-down{
   position: absolute;
@@ -100,6 +101,10 @@ i {
 }
 #notification a {
   color: gray;
+}
+
+.last-message{
+
 }
 
 /* ! SEARCH BAR SECTION */

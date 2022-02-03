@@ -60,13 +60,14 @@
                   <section id="contacts" class="d-flex flex-column flex-grow-1">
                      <div v-if="contact.visible" v-for="(contact, index) in contacts" :class="{active : index === currentIndex}" class="user-info" @click="setActiveClass(index)" role="button">
                         <img class="img-fluid" :src="'img/avatar' + contact.avatar + '.jpg'">
-                        <span class="ms-4 align-top">{{contact.name}}</span>
+                        <span class="px-2 ">{{contact.name}}</span>
+                        <!-- <span class="last-message align-bottom">CIao dove sie</span> -->
                      </div>
                   </section>
                </div>
 
                <div class="col-8 d-flex flex-column">
-                  <section class="active d-flex align-items-center justify-content-between ">
+                  <section class="active d-flex align-items-center">
                      <!-- FOTO PROFILO CONTATTO -->
                      <div class="contact-picture">
                         <img class="img-fluid" :src="`img/avatar${contacts[currentIndex].avatar}.jpg`">
@@ -111,7 +112,7 @@
                      <div class="input-group px-3">
                         <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendNewMessage">
                      </div>
-                     <i class="fas fa-microphone"></i>
+                     <i class="fas fa-microphone hover"></i>
                   </section>
                </div>
             </div>
