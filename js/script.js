@@ -172,7 +172,7 @@ const root = new Vue({
                 },
                 {
                     date: '20/03/2022 10:31:56',
-                    text: '',
+                    text: 'Dovevi seguire le mie dritte su Bitcoin',
                     status: 'sent'
                 },
                 ],
@@ -183,18 +183,23 @@ const root = new Vue({
                 visible: true,
                 messages: [{
                     date: '20/03/2022 09:16:00',
-                    text: "Hey fabio come è andato l'esame?",
+                    text: "Come sono andati i colloqui?",
                     status: 'sent'
                 },
                 {
                     date: '20/03/2022 10:30:00',
-                    text: "Benissimo sono riuscito a passarlo",
+                    text: "Mi hanno assunto!!!😁😁",
                     status: 'received'
                 },
                 {
                     date: '20/03/2022 10:31:56',
-                    text: 'Stasera festeggiamo!',
+                    text: 'Da lunedi inizio a lavorare per Google',
                     status: 'received'
+                },
+                {
+                    date: '20/03/2022 10:31:56',
+                    text: 'Metti una buona parola per me😏',
+                    status: 'sent'
                 }
                 ],
             },
