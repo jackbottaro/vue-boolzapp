@@ -41,20 +41,21 @@
                      <i class="fas fa-bell-slash"></i>
                      <div class="px-3 notification-text">
                         <p class="mb-0 ">Ricevi notifiche di nuovi messaggi</p>
-                        <a href="#">Attiva notifiche desktop</a>
+                        <a href="#" class="js-push-button">Attiva notifiche desktop</a>
                      </div>
                   </section>
 
+                  <!-- SEARCH BAR -->
                   <section id="search" class="position-relative">
-                     <div class="input-group">
-                        <i class="fas fa-search search-gray"></i>
-                        <input type="text" class="form-control mr-sm-2" placeholder="Cerca o inizia una nuova chat">
+                     <div class="input-search">
+                        <i class="fas fa-search icon-inside"></i>
+                        <input type="text" class="form-control mr-sm-2 icon-input" placeholder="Cerca o inizia una nuova chat"  v-model="search" @keyup="searchContacts"> 
                      </div>
                   </section>
 
                   <!-- STAMPO PER OGNI CONTATTO IL NOME E L'IMMAGINE RELATIVA AL INDEX -->
                   <section id="contacts" class="d-flex flex-column flex-grow-1">
-                     <div v-for="(contact, index) in contacts" :class="{active : index === currentIndex}" class="user-info" @click="setActiveClass(index)" role="button">
+                     <div v-if="contact.visible" v-for="(contact, index) in contacts" :class="{active : index === currentIndex}" class="user-info" @click="setActiveClass(index)" role="button">
                         <img class="img-fluid" :src="'img/avatar' + contact.avatar + '.jpg'">
                         <span class="ms-4 align-top">{{contact.name}}</span>
                      </div>
@@ -70,7 +71,7 @@
                      <!-- NOME DEL CONTATTO E ULTIMO ACCESSO -->
                      <div id="chat-contact-info" class="align-items-center flex-grow-1">
                         <p class="m-0">{{contacts[currentIndex].name}}</p>
-                        <span>Ultimo accesso oggi alle 12:53</span>
+                        <span>Ultimo accesso oggi alle {{randomNumber(10, 24)}}:{{randomNumber(10, 59)}} </span>
                      </div>
                      <!-- ICON -->
                      <div class="settings-icon">

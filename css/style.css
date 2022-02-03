@@ -41,6 +41,7 @@ img {
 
 .active {
   background-color: #eaeaea;
+
 }
 
 .overflow {
@@ -69,6 +70,14 @@ i {
   margin-right: 10px;
 }
 
+.icon-inside{
+  position: absolute;
+  z-index: 1;
+  top: 7px;
+  left: 0;
+}
+
+
 /* ! USER SECTION */
 #user {
   background-color: #eaeaea;
@@ -91,10 +100,13 @@ i {
 
 #search input {
   font-size: 15px;
-  opacity: 0.6;
+
+  padding-left: 40px;
 }
 
-
+.input-search{
+  position: relative;
+}
 
 /* ! RECENT MESSAGE SECTION */
 #contacts,

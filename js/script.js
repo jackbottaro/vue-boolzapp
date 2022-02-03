@@ -4,6 +4,7 @@ const root = new Vue({
     data: {
         newMessage: '',
         currentIndex: 0,
+        search: '',
         user: {
             name: 'Giacomo Bottaro',
             avatar: '_io'
@@ -46,7 +47,7 @@ const root = new Vue({
                 },
                 {
                     date: '20/03/2022 10:31:56',
-                    text: 'Stasera festeggiamo!',
+                    text: 'Stasera festeggiamo! 🥳🥳🥳',
                     status: 'received'
                 }
                 ],
@@ -93,7 +94,7 @@ const root = new Vue({
                 },
                 {
                     date: '10/01/2020 13:12:00',
-                    text: 'Bella idea',
+                    text: 'Bella idea 😊',
                     status: 'sent'
                 },
                 {
@@ -103,6 +104,101 @@ const root = new Vue({
                 }
                 ],
             },
+            {
+                name: 'Alessandro',
+                avatar: '_5',
+                visible: true,
+                messages: [{
+                    date: '20/03/2022 09:16:00',
+                    text: "Come stai?",
+                    status: 'received'
+                },
+                {
+                    date: '20/03/2022 10:30:00',
+                    text: "Tutto bene, tra poco finisco di lavorare, se vuoi ci vediamo al bar",
+                    status: 'sent'
+                },
+                {
+                    date: '20/03/2022 10:31:56',
+                    text: 'Volentieri',
+                    status: 'received'
+                },
+                {
+                    date: '20/03/2022 10:31:56',
+                    text: 'Fammi uno squillo quando finisci',
+                    status: 'received'
+                }
+                ],
+            },
+            {
+                name: 'Rossella',
+                avatar: '_6',
+                visible: true,
+                messages: [{
+                    date: '20/03/2022 09:16:00',
+                    text: "Come sono andate le vacanze?",
+                    status: 'sent'
+                },
+                {
+                    date: '20/03/2022 10:30:00',
+                    text: "Un incubo 😭, quando ci vediamo ti racconto come sono andate",
+                    status: 'received'
+                },
+                {
+                    date: '20/03/2022 10:31:56',
+                    text: 'Era meglio se fossi stata a casa',
+                    status: 'received'
+                }
+                ],
+            },
+            {
+                name: 'Antonio',
+                avatar: '_7',
+                visible: true,
+                messages: [{
+                    date: '20/03/2022 09:16:00',
+                    text: "Allora con le crypto come sei messo? Quando ti prendi il Ferrari?🤑",
+                    status: 'sent'
+                },
+                {
+                    date: '20/03/2022 10:30:00',
+                    text: "Mi tocca rimandare l'acquisto del ferrari 😢",
+                    status: 'received'
+                },
+                {
+                    date: '20/03/2022 10:31:56',
+                    text: 'Ho perso tutti i soldi su Dogecoin 💩',
+                    status: 'received'
+                },
+                {
+                    date: '20/03/2022 10:31:56',
+                    text: '',
+                    status: 'sent'
+                },
+                ],
+            },
+            {
+                name: 'Ciro',
+                avatar: '_8',
+                visible: true,
+                messages: [{
+                    date: '20/03/2022 09:16:00',
+                    text: "Hey fabio come è andato l'esame?",
+                    status: 'sent'
+                },
+                {
+                    date: '20/03/2022 10:30:00',
+                    text: "Benissimo sono riuscito a passarlo",
+                    status: 'received'
+                },
+                {
+                    date: '20/03/2022 10:31:56',
+                    text: 'Stasera festeggiamo!',
+                    status: 'received'
+                }
+                ],
+            },
+            
         ],
     },
     methods: {
@@ -119,5 +215,20 @@ const root = new Vue({
         setActiveClass(index) {
             this.currentIndex = index;
         },
+        searchContacts() {
+            const newSearch = this.search.trim().toLowerCase();
+            const result = this.contacts.filter((contact) => {
+                if (contact.name.toLowerCase().includes(newSearch)) {
+                    return contact.visible = true;
+                }
+                return contact.visible = false;
+            })
+            return result;
+        },
+        randomNumber(min, max) {
+            const number = Math.floor(Math.random() * (max - min + 1)) + min;
+                return number
+        },
     },
 });
+
