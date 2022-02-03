@@ -70,6 +70,11 @@ i {
 	opacity: 0.6;
 }
 
+i:hover{
+  color: #00a884;
+  transition: 0.5s;
+}
+
 .fa-bell-slash {
 	margin-left: 20px;
 	background-color: #eaeaea;
@@ -211,12 +216,5 @@ i {
 	background-color: white;
 	padding: 10px;
 	height: 80px;
-}
-
-#message-composer i {
-	color: gray;
-	font-size: 25px;
-	padding: 15px;
-	cursor: pointer;
 }
 
