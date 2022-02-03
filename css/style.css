@@ -59,7 +59,15 @@ img {
   background-color: #eaeaea;
 }
 
+.dropdown-menu{
+  border-radius: 10px;
+}
 
+
+element.style {
+  position: absolute;
+  transform: translate3d(-149px, -35px, 0px);
+}
 /* ! ICON SECTION */
 
 i {
