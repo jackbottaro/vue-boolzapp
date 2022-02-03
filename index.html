@@ -91,10 +91,12 @@
                         <div v-for="(message, index) in contacts[currentIndex].messages" :class="{sent : message.status === 'sent', received : message.status === 'received'}" class="message col-5">
                            <p>{{message.text}}</p>
                            <span class="text-right">{{message.date}}</span>
+                           <!-- ADDED DROPDOWN MENU FOR DELETING MESSAGE -->
                            <span class="dropdown">
-                              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <!-- <i class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                              </i> -->
+                              <i class="fas fa-caret-down" id="dropdownMenuButton" data-toggle="dropdown"></i>
+                              <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Info messaggio</a>
                                 <a class="dropdown-item" href="#" @click="deleteMessage(index)">Elimina</a>
                               </div>
