@@ -146,7 +146,7 @@ i {
 /* CONTANCT INFO CHAT */
 #chat-user-info {
   padding: 10px;
-
+  height: 70px;
 }
 
 #chat-user-info span {
@@ -163,7 +163,7 @@ i {
   background-image: url("../img/mine.jpg");
   padding: 40px 25px;
   overflow-y: auto;
-  max-height: 720px;
+  max-height: 730px;
 }
 
 #show-chat span {
