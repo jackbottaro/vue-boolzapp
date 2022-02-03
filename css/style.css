@@ -43,7 +43,7 @@ img {
 	border-radius: 50%;
 }
 
-.active {
+.header {
 	background-color: #eaeaea;
 }
 
@@ -75,7 +75,7 @@ i {
 	color: #8edafc;
 }
 
-.settings-icon {
+.icon {
 	margin-right: 10px;
 }
 
