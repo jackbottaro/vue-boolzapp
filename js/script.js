@@ -236,7 +236,7 @@ const root = new Vue({
                 return number
         },
 
-        FUNZIONE CHE CAMBIA IL VALORE DEL
+        // FUNZIONE CHE CAMBIA IL VALORE DEL
         deleteMessage(index) {
             this.contacts[this.currentIndex].messages.splice(index, 1);
         },
