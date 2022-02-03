@@ -234,6 +234,9 @@ const root = new Vue({
             const number = Math.floor(Math.random() * (max - min + 1)) + min;
                 return number
         },
+        deleteMessage(index) {
+            this.contacts[this.currentIndex].messages.splice(index, 1);
+        },
     },
 });
 
